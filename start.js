@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetSection) {
           targetSection.classList.add('active');
         }
-      });
-    });
-  });
+
+      }}
+    

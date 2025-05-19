@@ -23,7 +23,8 @@
   </header>
   
   <nav class="tab-nav">
-   <button class="tab-link active" data-tab="step1">Basic Information</button>
+  <button class="tab-link" onclick="location.href='index.html'">Home</button>
+   <button class="tab-link active" data-tab="step1">Personal Information</button>
     <button class="tab-link" data-tab="step2">Medical Understanding and Preferences</button>
     <button class="tab-link" data-tab="step3">Important Contacts</button>
     <button class="tab-link" data-tab="step4">Records</button>
@@ -32,8 +33,7 @@
   <main>
     <section id="step1" class="tab-content active">
       <form id="form-step1">
-        <fieldset>
-          <legend>Basic Information</legend>
+          <h2>Personal Information</h2>
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required>
           <label for="dob">Date of Birth</label>
@@ -71,15 +71,15 @@
             <label for="allergy-text">Please specify your allergies:</label>
             <input type="text" id="allergy-text" name="allergyDetails" placeholder="e.g., peanuts, penicillin">
             </div>
-        </fieldset>
-            <button type="submit">Save</button>
+       <button type="submit">Save</button>
+      
+          
       </form>
     </section>
 
     <section id="step2" class="tab-content">
       <form id="form-step2">
-        <fieldset>
-          <legend>Medical Understanding</legend>
+          <h2>Medical Understanding</h2>
           <label>Do you have any known medical conditions?</label>
           <textarea name="medicalConditions"></textarea>
 
@@ -95,14 +95,14 @@
             <label class="radio-option"><input type="radio" name="allergies" value="no" id="allergyNo"> No</label>
           </div>
           <textarea id="allergyDetails" name="allergyDetails" class="allergy-textbox" placeholder="Please specify your drug allergies..."></textarea>
-        </fieldset>
+  
       </form>
     </section>
 
     <section id="step3" class="tab-content">
       <form id="form-step3">
-        <fieldset>
-          <legend>Important Contacts</legend>
+    
+          <h2>Important Contacts</h2>
           <label for="contactName">Contact Name</label>
           <input type="text" id="contactName" name="contactName">
 
@@ -113,17 +113,17 @@
           <input type="text" id="phone" name="phone">
 
           <button type="button" class="btn-add">Add Another Contact</button>
-        </fieldset>
+      
       </form>
     </section>
 
     <section id="step4" class="tab-content">
       <form id="form-step4">
-        <fieldset>
-          <legend>Advance Care Records</legend>
+    
+          <h2>Advance Care Records</h2>
           <label for="documents">Upload ACP or LPA documents</label>
           <input type="file" id="documents" name="documents" multiple>
-        </fieldset>
+  
       </form>
     </section>
   </main>
