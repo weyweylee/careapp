@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareAhead Planner</title>
+  <link rel="stylesheet" href="start.css" />
+  <script src="start.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW58SFPZB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5BW58SFPZB');
+  </script>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>CareAhead Planner</h1>
+    <p>Plan your care journey</p>
+  </header>
+  
+  <nav class="tab-nav">
+   <button class="tab-link active" data-tab="step1">Basic Information</button>
+    <button class="tab-link" data-tab="step2">Medical Understanding and Preferences</button>
+    <button class="tab-link" data-tab="step3">Important Contacts</button>
+    <button class="tab-link" data-tab="step4">Records</button>
+  </nav>
+
+  <main>
+    <section id="step1" class="tab-content active">
+      <form id="form-step1">
+        <fieldset>
+          <legend>Basic Information</legend>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address">
+          <label for="preferred language">Preferred language</label>
+            <select id="preferred-language" name="preferredLanguage" onchange="toggleOtherLanguageInput()">
+            <option value="">-- Select your preferred language --</option>
+            <!-- Official languages -->
+            <option value="english">English</option>
+            <option value="mandarin">Mandarin</option>
+            <option value="malay">Malay</option>
+            <option value="tamil">Tamil</option>
+            <!-- Chinese dialects -->
+            <option value="hokkien">Hokkien</option>
+            <option value="cantonese">Cantonese</option>
+            <option value="teochew">Teochew</option>
+            <option value="hakka">Hakka</option>
+            <!-- Other -->
+            <option value="other">Other</option>
+            </select>
+            <div class="other-language-box" id="other-language-box">
+            <label for="other-language">Please specify your language:</label>
+            <input type="text" id="other-language" name="otherLanguage" placeholder="Enter language here">
+            </div>
+          <label for="allergies">Medication allergies</label>
+            <div class="radio-group">
+            <input type="radio" id="allergies-no" name="allergies" value="no" onclick="toggleTextBox(false)">
+            <label for="allergies-no">No</label> 
+            <input type="radio" id="allergies-yes" name="allergies" value="yes" onclick="toggleTextBox(true)">
+            <label for="allergies-yes">Yes</label>
+            </div>
+            <div class="allergy-textbox" id="allergyDetails">
+            <label for="allergy-text">Please specify your allergies:</label>
+            <input type="text" id="allergy-text" name="allergyDetails" placeholder="e.g., peanuts, penicillin">
+            </div>
+        </fieldset>
+            <button type="submit">Save</button>
+      </form>
+    </section>
+
+    <section id="step2" class="tab-content">
+      <form id="form-step2">
+        <fieldset>
+          <legend>Medical Understanding</legend>
+          <label>Do you have any known medical conditions?</label>
+          <textarea name="medicalConditions"></textarea>
+
+          <label>Do you understand your condition?</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="understanding" value="yes"> Yes</label>
+            <label class="radio-option"><input type="radio" name="understanding" value="no"> No</label>
+          </div>
+
+          <label>Do you have any drug allergies?</label>
+          <div class="radio-group">
+            <label class="radio-option"><input type="radio" name="allergies" value="yes" id="allergyYes"> Yes</label>
+            <label class="radio-option"><input type="radio" name="allergies" value="no" id="allergyNo"> No</label>
+          </div>
+          <textarea id="allergyDetails" name="allergyDetails" class="allergy-textbox" placeholder="Please specify your drug allergies..."></textarea>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="step3" class="tab-content">
+      <form id="form-step3">
+        <fieldset>
+          <legend>Important Contacts</legend>
+          <label for="contactName">Contact Name</label>
+          <input type="text" id="contactName" name="contactName">
+
+          <label for="relationship">Relationship</label>
+          <input type="text" id="relationship" name="relationship">
+
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone">
+
+          <button type="button" class="btn-add">Add Another Contact</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="step4" class="tab-content">
+      <form id="form-step4">
+        <fieldset>
+          <legend>Advance Care Records</legend>
+          <label for="documents">Upload ACP or LPA documents</label>
+          <input type="file" id="documents" name="documents" multiple>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  
+</body>
+</html>
