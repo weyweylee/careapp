@@ -20,13 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const formStep1 = document.getElementById('form-step1');
   formStep1.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    // Optional: Validate form fields here
-
-    // Simulate click on step2 tab
-    const step2Tab = document.querySelector('.tab-link[data-tab="step2"]');
-    if (step2Tab) step2Tab.click();
-  });
 });
 
 // Handle form submit and move to step3
@@ -40,4 +33,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const step3Tab = document.querySelector('.tab-link[data-tab="step3"]');
     if (step3Tab) step3Tab.click();
   });
-});
