@@ -85,7 +85,6 @@
     <section id="step2" class="tab-content">
       <form id="form-step2">
           <h2>Step 2: Medical Understanding and Preferences</h2>
-          <form id="form-step2">
     <section>
           <label for="loved-ones">Who have you spoken to about your values and care preferences?</label>
           <input type="text" placeholder="E.g. spouse, children, healthcare provider..." id="name" name="name">
@@ -136,23 +135,38 @@
       </form>
     </section>
 
-    <section id="step3" class="tab-content">
-      <form id="form-step3">
-    
-          <h2>Step 3: Important Contacts</h2>
-          <label for="contactName">Contact Name</label>
-          <input type="text" id="contactName" name="contactName">
+ <section id="step3" class="tab-content">
+  <form id="form-step3">
+    <h2>Step 3: Important Contacts</h2>
 
-          <label for="relationship">Relationship</label>
-          <input type="text" id="relationship" name="relationship">
+    <label for="contactName">Contact Name</label>
+    <input type="text" id="contactName" name="contactName" required>
 
-          <label for="phone">Phone Number</label>
-          <input type="text" id="phone" name="phone">
+    <label for="relationship">Relationship</label>
+    <select id="relationship" name="relationship" required>
+      <option value="">--Select Relationship--</option>
+      <option value="Spouse">Spouse</option>
+      <option value="Child">Child</option>
+      <option value="Parent">Parent</option>
+      <option value="Sibling">Sibling</option>
+      <option value="Friend">Friend</option>
+      <option value="Caregiver">Caregiver</option>
+      <option value="Other">Other</option>
+    </select>
 
-          <button type="button" class="btn-add">Add Another Contact</button>
-      
-      </form>
-    </section>
+    <!-- Hidden custom relationship input -->
+    <div id="customRelationshipContainer" style="display:none;">
+      <label for="customRelationship">Please specify:</label>
+      <input type="text" id="customRelationship" name="customRelationship">
+    </div>
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <button type="button" class="btn-add">Add Another Contact</button>
+  </form>
+</section>
+ 
 
     <section id="step4" class="tab-content">
       <form id="form-step4">
