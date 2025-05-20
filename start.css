@@ -163,6 +163,7 @@ button[type="submit"] {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.3s;
+  margin-left: 42rem;
 }
 
 button[type="submit"]:hover {
@@ -186,10 +187,42 @@ button[type="submit"]:hover {
   background-color: #06364f;
 }
 
+button#submitBtn {
+  margin-left: 360px;
+  background-color: #e15633;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button#submitBtn:hover {
+  background-color: #920202; 
+}
+
+button#submitBtn4 {
+  margin-left: 360px;
+  background-color: #e15633;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button#submitBtn4:hover {
+  background-color: #920202; 
+}
+
+
 #showContactFormBtn {
-  background-color: rgb(248, 243, 185); 
+  background-color: rgb(251 218 59); 
   color: black;
   font-size: 16px;
+  font-weight: bold;
   padding: 10px 16px;
   margin-bottom: 10px;
   border: none;
@@ -198,10 +231,6 @@ button[type="submit"]:hover {
   transition: background-color 0.3s ease;
   width: fit-content;  
   position: center;
-}
-
-#showContactFormBtn:hover {
-  background-color: #fcf977;
 }
 
 form#contactForm {
@@ -302,4 +331,12 @@ table#contactTable {
   text-align: left;
   width: 2%; 
   word-wrap: break-word;
+}
+
+.message-entry {
+  background-color: #f9f9f9;
+}
+
+.action-buttons button {
+  margin-right: 8px;
 }
