@@ -144,7 +144,7 @@
     <h2>Step 3: Important Contacts</h2>
     <div style="text-align: center;">
     <!-- Add Contact Button -->
-<button id="showContactFormBtn" type="button">➕ Add Contact</button>
+<button id="showContactFormBtn" type="button"> 📄 Add New Contact</button>
 </div>
 
 <!-- Hidden Contact Form -->
@@ -200,7 +200,14 @@
   <label for="message">Leave a message for your loved ones.</label>
   <input type="text" id="message" name="message">
   <button type="submit" id="submitBtn4">Add</button>
-  <div id="messageList"></div>
+<div table id="messageList"></div>
+  <!-- Table to display messages -->
+<table id="messageList" border="1" style="margin-top: 1em; width: 100%; display: none;">
+  <thead>
+    <tr><th>Message</th></tr>
+  </thead>
+  <tbody></tbody>
+</table>
 <a href="tq.html" class="btn-save">Submit</a>
 </form>
 

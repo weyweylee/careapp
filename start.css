@@ -219,8 +219,8 @@ button#submitBtn4:hover {
 
 
 #showContactFormBtn {
-  background-color: rgb(242, 242, 5); 
-  color: black;
+  background-color: #e15633; 
+  color: white;
   font-size: 16px;
   font-weight: bold;
   padding: 10px 16px;
@@ -339,4 +339,55 @@ table#contactTable {
 
 .action-buttons button {
   margin-right: 8px;
+}
+
+ #table id="messageList" {
+    border=1;
+    margin-top: 2em;
+    width: 80%;
+    display: none;
+    color:blue;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: rgb(4, 4, 4);
+}
+
+#messageList{
+  border: 0.5px solid #100f0f;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: table;
+  color: rgb(3, 3, 3);
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+#messageList th,
+#messageList td {
+  border: 0.5px solid #060606;
+  padding: 0%;
+  text-align: left;
+  width: 100%; 
+  word-wrap:break-word;
+}
+
+.message-entry {
+  background-color: white;
+}
+
+.action-buttons button {
+  margin-right: 8px;
+}
+p {
+    display: block;
+    margin-block-start: em;
+    margin-block-end: em;
+    margin-inline-start: 1rem;
+    margin-inline-end 1rem;;
+    unicode-bidi: isolate;
 }
