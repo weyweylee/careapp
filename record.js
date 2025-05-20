@@ -1,13 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("form-step4");
+ const form = document.getElementById("form-step4");
   const messageInput = document.getElementById("message");
   const messageList = document.getElementById("messageList");
-
-  // Create the <ul> only once and reuse it
-  const ul = document.createElement("ul");
-  ul.style.listStyleType = "none";
-  ul.style.padding = "0";
-  messageList.appendChild(ul);
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -17,14 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const timestamp = new Date().toLocaleString();
 
-    // Each message goes into an <li>
-    const li = document.createElement("li");
-    li.className = "message-entry";
-    li.style.border = "1px solid #ccc";
-    li.style.padding = "10px";
-    li.style.marginBottom = "10px";
-    li.style.borderRadius = "6px";
-    li.style.backgroundColor = "#f9f9f9";
+    const entry = document.createElement("div");
+    entry.className = "message-entry";
 
     const textPara = document.createElement("p");
     textPara.className = "message-text";
@@ -33,13 +20,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const meta = document.createElement("div");
     meta.className = "message-meta";
     meta.textContent = "Last updated: " + timestamp;
-    meta.style.fontSize = "12px";
-    meta.style.color = "#666";
 
-    li.appendChild(textPara);
-    li.appendChild(meta);
-    ul.appendChild(li);
+    const actions = document.createElement("div");
+    actions.className = "action-buttons";
+
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.onclick = () => {
+      const newText = prompt("Edit your message:", textPara.textContent);
+      if (newText !== null) {
+        textPara.textContent = newText;
+        meta.textContent = "Last updated: " + new Date().toLocaleString();
+      }
+    };
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.onclick = () => {
+      messageList.removeChild(entry);
+    };
+
+    actions.appendChild(editBtn);
+    actions.appendChild(deleteBtn);
+
+    entry.appendChild(textPara);
+    entry.appendChild(meta);
+    entry.appendChild(actions);
+
+    messageList.appendChild(entry);
 
     messageInput.value = "";
   });
-});

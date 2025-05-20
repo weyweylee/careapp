@@ -72,7 +72,6 @@ main {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #28a745;
-  background-color: rgb(241, 241, 231)
 }
 .info-section ul {
   list-style-type: disc;
@@ -115,7 +114,7 @@ main {
   margin-bottom: 1rem;
   color: #28a745;
   text-align: left;
-  background-color: rgb(241, 241, 231)
+
 }
 
 .video-container {
@@ -130,6 +129,6 @@ main {
   position: absolute;
   top: 0;
   left: 10%;
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  height: 60%;
 }

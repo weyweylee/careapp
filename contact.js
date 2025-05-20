@@ -50,10 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //         <td>${name}</td>
 //         <td>${relationship}</td>
 //         <td>${phone}</td>
-//         <td>
-//           <button type="button" class="edit-btn">Edit</button>
-//           <button type="button" class="delete-btn">Delete</button>
-//         </td>
+//   
 //       `;
 //       tbody.appendChild(row);
 //     } else {
