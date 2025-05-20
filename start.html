@@ -139,34 +139,11 @@
  <section id="step3" class="tab-content">
   <form id="form-step3">
     <h2>Step 3: Important Contacts</h2>
-    <label for="contactName">Contact Name
-    <input type="text" id="contactName" name="contactName"></label>
-    
-    <label for="relationship">Relationship
-    <select id="relationship" name="relationship">
-      <option value="">--Select Relationship--</option>
-      <option value="Spouse">Spouse</option>
-      <option value="Child">Child</option>
-      <option value="Parent">Parent</option>
-      <option value="Sibling">Sibling</option>
-      <option value="Friend">Friend</option>
-      <option value="Caregiver">Caregiver</option>
-      <option value="Other">Other</option>
-    </select></label>
-
-    <!-- Hidden custom relationship input -->
-    <div id="customRelationshipContainer" style="display:none;">
-      <label for="customRelationship">Please specify:</label>
-      <input type="text" id="customRelationship" name="customRelationship">
-    </div>
-
-    <label for="phone">Phone Number
-    <input type="text" id="phone" name="phone"></label>
-
-
+  
+    <div style="text-align: center;">
     <!-- Add Contact Button -->
-<button id="showContactFormBtn" type="button">Add Contact</button>
-
+<button id="showContactFormBtn" type="button">➕ Add Contact</button>
+</div>
 <!-- Hidden Contact Form -->
 <div id="contactFormContainer" style="display: none; margin-top: 1em;">
   <form id="contactForm">
