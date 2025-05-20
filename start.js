@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Step Navigation ---
   const formStep1 = document.getElementById('form-step1');
   const formStep2 = document.getElementById('form-step2');
+  const formStep3 = document.getElementById('form-step3');
 
   formStep1?.addEventListener('submit', e => {
     e.preventDefault();
@@ -26,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
   formStep2?.addEventListener('submit', e => {
     e.preventDefault();
     document.querySelector('.tab-link[data-tab="step3"]')?.click();
+  });
+
+  formStep3?.addEventListener('submit', e => {
+    e.preventDefault();
+    document.querySelector('.tab-link[data-tab="step4"]')?.click();
   });
 
   // --- Relationship Dropdown ---
@@ -42,32 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
       customInput.value = '';
       customInput.required = false;
     }
-  });
-
-  // --- Add Contact to List ---
-  document.querySelector('.btn-add')?.addEventListener('click', () => {
-    const name = document.getElementById('contactName').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const relationship = relationshipSelect.value === 'Other'
-      ? customInput.value.trim()
-      : relationshipSelect.value;
-
-    if (!name || !relationship || !phone) {
-      alert('Please fill in all fields before adding.');
-      return;
-    }
-
-    const li = document.createElement('li');
-    li.textContent = `${name} (${relationship}) - ${phone}`;
-    document.getElementById('contactList').appendChild(li);
-
-    // Reset fields
-    document.getElementById('contactName').value = '';
-    document.getElementById('relationship').value = '';
-    document.getElementById('phone').value = '';
-    customInput.value = '';
-    customContainer.style.display = 'none';
-    customInput.required = false;
   });
 
   // --- Language Selection ---

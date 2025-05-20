@@ -171,7 +171,7 @@ button[type="submit"]:hover {
 
 
 
-.btn-add {
+.btn-save {
   padding: 10px 16px;
   background-color: #0a5275;
   color: white;
@@ -180,7 +180,7 @@ button[type="submit"]:hover {
   font-size: 1rem;
   cursor: pointer;
 }
-.btn-add:hover {
+.btn-save:hover {
   background-color: #06364f;
 }
 

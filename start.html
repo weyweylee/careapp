@@ -6,6 +6,7 @@
   <title>CareAhead Planner</title>
   <link rel="stylesheet" href="start.css" />
   <script src="start.js"></script>
+  <script src="contact.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW58SFPZB"></script>
   <script>
@@ -162,6 +163,56 @@
     <label for="phone">Phone Number
     <input type="text" id="phone" name="phone"></label>
 
+
+    <!-- Add Contact Button -->
+<button id="showContactFormBtn" type="button">Add Contact</button>
+
+<!-- Hidden Contact Form -->
+<div id="contactFormContainer" style="display: none; margin-top: 1em;">
+  <form id="contactForm">
+    <input type="hidden" id="editingIndex"> <!-- Track editing row -->
+    
+    <label for="contactName">Contact Name:</label>
+    <input type="text" id="contactName" name="contactName" required><br>
+
+    <label for="relationship">Relationship:</label>
+    <select id="relationship" name="relationship" required>
+      <option value="">--Select Relationship--</option>
+      <option value="Spouse">Spouse</option>
+      <option value="Child">Child</option>
+      <option value="Parent">Parent</option>
+      <option value="Sibling">Sibling</option>
+      <option value="Friend">Friend</option>
+      <option value="Caregiver">Caregiver</option>
+      <option value="Other">Other</option>
+    </select><br>
+
+    <div id="customRelationshipContainer" style="display: none;">
+      <label for="customRelationship">Please specify:</label>
+      <input type="text" id="customRelationship" name="customRelationship">
+    </div>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required><br>
+
+    <button type="submit" id="submitBtn">Add</button>
+  </form>
+</div>
+
+<!-- Table to display contacts -->
+<table id="contactTable" border="1" style="margin-top: 2em; width: 100%; display: none;">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Relationship</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
     <button type="submit">Save</button>
   </form>
 </section>
@@ -175,7 +226,7 @@
 
    <input type="file" id="fileInput" />
   <div class="file-list" id="fileList"></div>
-  <button type="button" class="btn-add">Add Message</button>
+  <button type="button" class="btn-save">Save</button>
 
   </form>
     </section>
