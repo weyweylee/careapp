@@ -34,6 +34,35 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.tab-link[data-tab="step4"]')?.click();
   });
 
+  document.getElementById("submitBtn")?.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('contactTable').style.display = "block";
+
+const tbodyRef = document.getElementById('contactTable').getElementsByTagName('tbody')[0];
+
+  // Insert a row at the end of table
+  const newRow = tbodyRef.insertRow();
+  let name = newRow.insertCell();
+  let newText = document.createTextNode(document.getElementById("contactName").value);
+  name.appendChild(newText);
+
+  let relationship = newRow.insertCell();
+let newText1;
+
+  if(document.getElementById("relationship").value != "Other"){
+    newText1 = document.createTextNode(document.getElementById("relationship").value);
+  }else{
+    newText1 = document.createTextNode(document.getElementById("customRelationship").value);
+  }
+
+  relationship.appendChild(newText1);
+
+    let phone = newRow.insertCell();
+  let newText2 = document.createTextNode(document.getElementById("phone").value);
+  phone.appendChild(newText2);
+
+  });
+
   // --- Relationship Dropdown ---
   const relationshipSelect = document.getElementById('relationship');
   const customContainer = document.getElementById('customRelationshipContainer');

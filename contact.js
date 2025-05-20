@@ -32,45 +32,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Handle form submission (add or update)
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+//   form.addEventListener('submit', (e) => {
+//     e.preventDefault();
 
-    const name = document.getElementById('contactName').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const relationship = relationshipSelect.value === 'Other'
-      ? customInput.value.trim()
-      : relationshipSelect.value;
+//     const name = document.getElementById('contactName').value.trim();
+//     const phone = document.getElementById('phone').value.trim();
+//     const relationship = relationshipSelect.value === 'Other'
+//       ? customInput.value.trim()
+//       : relationshipSelect.value;
 
-    const index = editingIndexInput.value;
+//     const index = editingIndexInput.value;
 
-    if (index === '') {
-      // Add new contact
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td>${name}</td>
-        <td>${relationship}</td>
-        <td>${phone}</td>
-        <td>
-          <button type="button" class="edit-btn">Edit</button>
-          <button type="button" class="delete-btn">Delete</button>
-        </td>
-      `;
-      tbody.appendChild(row);
-    } else {
-      // Update existing contact
-      const row = tbody.children[index];
-      row.children[0].textContent = name;
-      row.children[1].textContent = relationship;
-      row.children[2].textContent = phone;
-    }
+//     if (index === '') {
+//       // Add new contact
+//       const row = document.createElement('tr');
+//       row.innerHTML = `
+//         <td>${name}</td>
+//         <td>${relationship}</td>
+//         <td>${phone}</td>
+//         <td>
+//           <button type="button" class="edit-btn">Edit</button>
+//           <button type="button" class="delete-btn">Delete</button>
+//         </td>
+//       `;
+//       tbody.appendChild(row);
+//     } else {
+//       // Update existing contact
+//       const row = tbody.children[index];
+//       row.children[0].textContent = name;
+//       row.children[1].textContent = relationship;
+//       row.children[2].textContent = phone;
+//     }
 
-    form.reset();
-    editingIndexInput.value = '';
-    customContainer.style.display = 'none';
-    formContainer.style.display = 'none';
-    submitBtn.textContent = 'Add';
-    table.style.display = 'table';
-  });
+//     form.reset();
+//     editingIndexInput.value = '';
+//     customContainer.style.display = 'none';
+//     formContainer.style.display = 'none';
+//     submitBtn.textContent = 'Add';
+//     table.style.display = 'table';
+//   });
 
   // Event delegation for Edit/Delete buttons
   tbody.addEventListener('click', (e) => {
