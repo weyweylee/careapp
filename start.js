@@ -140,51 +140,10 @@ let newText1;
       <label style="display:block;">Date of Upload:</label>
       <input type="text" readonly value="${new Date().toLocaleString()}">
     `;
-
-    recordsList.appendChild(recordDiv);
   });
+})
 
-  // --- Simple File Upload Display List ---
-  const fileInput = document.getElementById('fileInput');
-  const fileList = document.getElementById('fileList');
-
-  fileInput?.addEventListener('change', () => {
-    const file = fileInput.files[0];
-    if (!file) return;
-
-    const listItem = document.createElement('div');
-    listItem.className = 'file-item';
-
-    const blobUrl = URL.createObjectURL(file);
-    const now = new Date().toLocaleString();
-
-    const fileInfo = document.createElement('div');
-    fileInfo.className = 'file-info';
-    fileInfo.innerHTML = `<strong>${file.name}</strong><br><small>Uploaded: ${now}</small>`;
-
-    const actions = document.createElement('div');
-    actions.className = 'file-actions';
-
-    const downloadBtn = document.createElement('a');
-    downloadBtn.href = blobUrl;
-    downloadBtn.download = file.name;
-    downloadBtn.innerHTML = '<button>Download</button>';
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.addEventListener('click', () => {
-      URL.revokeObjectURL(blobUrl);
-      fileList.removeChild(listItem);
-    });
-
-    actions.appendChild(downloadBtn);
-    actions.appendChild(deleteBtn);
-
-    listItem.appendChild(fileInfo);
-    listItem.appendChild(actions);
-    fileList.appendChild(listItem);
-
-    fileInput.value = ''; // Reset input
-  });
+document.querySelector('.btn-save').addEventListener('click', function (e) {
+  e.preventDefault(); // prevent actual form submission
+  alert('Submission successful!');
 });
-

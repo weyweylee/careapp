@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="start.css" />
   <script src="start.js"></script>
   <script src="contact.js"></script>
+   <script src="record.js"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BW58SFPZB"></script>
   <script>
@@ -172,14 +173,14 @@
 
     <label for="phone">Phone Number:</label>
     <input type="text" id="phone" name="phone"><br>
-
-    <button type="submit" id="submitBtn">Add</button>
   </form>
+    <button type="submit" id="submitBtn">Add</button>
+
 </div> 
 
 
 <!-- Table to display contacts -->
-<table id="contactTable" border="1" style="margin-top: 2em; width: 100%; display: none;">
+<table id="contactTable" border="1" style="margin-top: 2em; width: 80%; display: none;">
   <thead>
     <tr>
       <th>Name</th>
@@ -197,17 +198,17 @@
  
 
     <section id="step4" class="tab-content">
-      <form id="form-step4">
-       <h2>Step 4. Records</h2>
-        <label for="messages">Leave a message for your loved ones.
-          <input type="text" id="message" name="message"></label>
+     <form id="form-step4">
+  <h2>Step 4. Records</h2>
+  
+  <label for="message">Leave a message for your loved ones.</label>
+  <input type="text" id="message" name="message">
 
-   <input type="file" id="fileInput" />
-  <div class="file-list" id="fileList"></div>
-
+  <button type="submit" id="submitBtn">Add</button>
   <button type="button" class="btn-save">Submit</button>
+</form>
 
-  </form>
+<div id="messageList"></div>
     </section>
 
   </main>
