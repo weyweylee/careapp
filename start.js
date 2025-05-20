@@ -136,25 +136,5 @@ let newText1;
   const recordsList = document.getElementById('records-list');
 
   addRecordBtn?.addEventListener('click', () => {
-    const recordDiv = document.createElement('div');
-    recordDiv.style.border = '1px solid #ccc';
-    recordDiv.style.padding = '10px';
-    recordDiv.style.marginBottom = '10px';
-
-    // Title input
-    recordDiv.innerHTML += `
-      <label>Title: <input type="text" required></label><br>
-      <label style="display:block;">Message:</label>
-      <textarea rows="3" style="width:100%;"></textarea>
-      <label style="display:block;">Upload Document/Video/Voice:</label>
-      <input type="file" accept=".pdf,.doc,.docx,.txt,video/*,audio/*">
-      <label style="display:block;">Date of Upload:</label>
-      <input type="text" readonly value="${new Date().toLocaleString()}">
-    `;
   });
 })
-
-document.querySelector('.btn-save').addEventListener('click', function (e) {
-  e.preventDefault(); // prevent actual form submission
-  alert('Submission successful!');
-});
