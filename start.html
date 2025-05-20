@@ -138,12 +138,11 @@
  <section id="step3" class="tab-content">
   <form id="form-step3">
     <h2>Step 3: Important Contacts</h2>
-
-    <label for="contactName">Contact Name</label>
-    <input type="text" id="contactName" name="contactName" required>
-
-    <label for="relationship">Relationship</label>
-    <select id="relationship" name="relationship" required>
+    <label for="contactName">Contact Name
+    <input type="text" id="contactName" name="contactName"></label>
+    
+    <label for="relationship">Relationship
+    <select id="relationship" name="relationship">
       <option value="">--Select Relationship--</option>
       <option value="Spouse">Spouse</option>
       <option value="Child">Child</option>
@@ -152,7 +151,7 @@
       <option value="Friend">Friend</option>
       <option value="Caregiver">Caregiver</option>
       <option value="Other">Other</option>
-    </select>
+    </select></label>
 
     <!-- Hidden custom relationship input -->
     <div id="customRelationshipContainer" style="display:none;">
@@ -160,23 +159,27 @@
       <input type="text" id="customRelationship" name="customRelationship">
     </div>
 
-    <label for="phone">Phone Number</label>
-    <input type="text" id="phone" name="phone" required>
+    <label for="phone">Phone Number
+    <input type="text" id="phone" name="phone"></label>
 
-    <button type="button" class="btn-add">Add Another Contact</button>
+    <button type="submit">Save</button>
   </form>
 </section>
  
 
     <section id="step4" class="tab-content">
       <form id="form-step4">
-    
-          <h2>Advance Care Records</h2>
-          <label for="documents">Upload ACP or LPA documents</label>
-          <input type="file" id="documents" name="documents" multiple>
-  
-      </form>
+       <h2>Step 4. Records</h2>
+        <label for="messages">Leave a message for your loved ones.
+          <input type="text" id="message" name="message"></label>
+
+   <input type="file" id="fileInput" />
+  <div class="file-list" id="fileList"></div>
+  <button type="button" class="btn-add">Add Message</button>
+
+  </form>
     </section>
+
   </main>
   
 </body>
