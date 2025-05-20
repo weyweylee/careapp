@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
   // --- Tab Switching ---
   const tabButtons = document.querySelectorAll('.tab-link[data-tab]');
@@ -33,6 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     document.querySelector('.tab-link[data-tab="step4"]')?.click();
   });
+
+     document.getElementById("submitBtn4")?.addEventListener('click', e => {
+    e.preventDefault();
+      const para = document.createElement("p");
+      para.innerHTML = document.getElementById("message").value;
+      document.getElementById("messageList").appendChild(para);
+      //document.getElementById("messageList").appendChild().textContent = "111";
+
+     });
+
 
   document.getElementById("submitBtn")?.addEventListener('click', e => {
     e.preventDefault();

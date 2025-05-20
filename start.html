@@ -140,7 +140,6 @@
  <section id="step3" class="tab-content">
   
     <h2>Step 3: Important Contacts</h2>
-  
     <div style="text-align: center;">
     <!-- Add Contact Button -->
 <button id="showContactFormBtn" type="button">➕ Add Contact</button>
@@ -153,7 +152,6 @@
     
     <label for="contactName">Contact Name:</label>
     <input type="text" id="contactName" name="contactName"><br>
-
     <label for="relationship">Relationship:</label>
     <select id="relationship" name="relationship">
       <option value="">--Select Relationship--</option>
@@ -165,19 +163,15 @@
       <option value="Caregiver">Caregiver</option>
       <option value="Other">Other</option>
     </select><br>
-
     <div id="customRelationshipContainer" style="display: none;">
       <label for="customRelationship">Please specify:</label>
       <input type="text" id="customRelationship" name="customRelationship">
     </div>
-
     <label for="phone">Phone Number:</label>
     <input type="text" id="phone" name="phone"><br>
   </form>
-    <button type="submit" id="submitBtn">Add</button>
-
+    <button type="submit" id="submitBtn" style="margin-left:  360px;background-color: #e15633">Add</button>
 </div> 
-
 
 <!-- Table to display contacts -->
 <table id="contactTable" border="1" style="margin-top: 2em; width: 80%; display: none;">
@@ -203,12 +197,12 @@
   
   <label for="message">Leave a message for your loved ones.</label>
   <input type="text" id="message" name="message">
-
-  <button type="submit" id="submitBtn">Add</button>
+<div id="messageList"></div>
+  <button type="submit" id="submitBtn4">Add</button>
   <button type="button" class="btn-save">Submit</button>
 </form>
 
-<div id="messageList"></div>
+
     </section>
 
   </main>
