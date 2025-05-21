@@ -36,9 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
      document.getElementById("submitBtn4")?.addEventListener('click', e => {
+      console.log("are you the one?")
     e.preventDefault();
       const para = document.createElement("p");
-      para.innerHTML = document.getElementById("message").value;
+      const date = new Date();
+      const formattedDate = date.toLocaleString('en-SG', { timeZoneName: 'short' });
+      para.innerHTML = document.getElementById("message").value + " (" + formattedDate + ")";
       document.getElementById("messageList").appendChild(para);
       //document.getElementById("messageList").appendChild().textContent = "111";
 
