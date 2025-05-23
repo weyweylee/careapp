@@ -119,10 +119,11 @@ main {
 
 .video-container {
   position: relative;
-  padding-bottom: 60%; /* 16:9 aspect ratio */
+  padding-bottom: 40%;
   height: 0;
   margin: 0 auto;
-  max-width: 80%;
+   max-width: 50rem;
+  width: 90%;
 }
 
 .video-container iframe {
@@ -130,5 +131,14 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  font-size: 11px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
