@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //       row.children[0].textContent = name;
 //       row.children[1].textContent = relationship;
 //       row.children[2].textContent = phone;
-//     }
+      
 
 //     form.reset();
 //     editingIndexInput.value = '';

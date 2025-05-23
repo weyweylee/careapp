@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
      });
 
-     
 
   document.getElementById("submitBtn")?.addEventListener('click', e => {
     e.preventDefault();
