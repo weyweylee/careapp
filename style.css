@@ -64,6 +64,13 @@ main {
   
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
 .info-section {
   margin-bottom: 2rem;
 }
@@ -141,4 +148,14 @@ footer {
   margin-right: 5rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
