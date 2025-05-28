@@ -4,7 +4,6 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .page-header {
@@ -39,11 +38,11 @@ body {
 }
 
 .tab-content {
+  display: none;
   padding: 2rem;
   background-color: white;
   margin: 1rem auto;
-  max-width: 95%;
-  width: 100%;
+  max-width: 800px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -171,12 +170,7 @@ button[type="submit"]:hover {
   background-color: #218838;
 }
 
-button[type="submit"],
-button#submitBtn,
-button#submitBtn4 {
-  margin: 1rem auto;
-  display: block;
-}
+
 
 .btn-save {
   padding: 10px 16px;
@@ -267,13 +261,6 @@ table#contactTable {
     display: block;
     margin-left: 80px;
     margin-right: 80px;
-}
-
-#contactTable,
-#messageList {
-  width: 100%;
-  overflow-x: auto;
-  display: block;
 }
 
 #messageList {
@@ -403,23 +390,4 @@ p {
     margin-inline-start: 1rem;
     margin-inline-end 1rem;;
     unicode-bidi: isolate;
-}
-@media (max-width: 768px) {
-  .tab-link {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  form#contactForm {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  table#contactTable,
-  #messageList {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    overflow-x: auto;
-  }
 }
