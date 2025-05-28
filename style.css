@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
   background-color: #f4f7f9;
-  color: #0a0a0a;
+  color: #050505;
 }
 
 /*header*/
@@ -63,13 +63,6 @@ main {
   margin-top: 2rem;
   
 }
-
-@media (max-width: 768px) {
-  main {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
 
 .info-section {
   margin-bottom: 2rem;
